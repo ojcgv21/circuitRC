@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="calculate()">
+        <div class="form-group">
+          <label for="resistencia">Resistencia en ohmios</label>
+          <input type="number" class="form-control" name="resistencia" [(ngModel)]="data.resistencia" value="1000">
+        </div>
+        <div class="form-group">
+          <label for="capacitancia">Capacitancia en microfaradios</label>
+          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.capacitancia" value="5">
+        </div>
+        <div class="form-group">
+          <label for="voltaje">Voltaje en voltios</label>
+          <input type="number" class="form-control" name="voltaje" [(ngModel)]="data.voltaje" value="10">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Calcular</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <div *ngIf="chart">
+        <canvas id="canvas">{{ chart }}</canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
