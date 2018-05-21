@@ -4,12 +4,24 @@
     <div class="col-md-6">
       <form (ngSubmit)="calculate()">
         <div class="form-group">
-          <label for="resistencia">Resistencia en ohmios</label>
-          <input type="number" class="form-control" name="resistencia" [(ngModel)]="data.resistencia" value="1000">
+          <label for="resistencia">R1 en ohmios</label>
+          <input type="number" class="form-control" name="resistencia" [(ngModel)]="data.R1" value="1000">
         </div>
         <div class="form-group">
-          <label for="capacitancia">Capacitancia en microfaradios</label>
-          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.capacitancia" value="5">
+          <label for="capacitancia">C1 en microfaradios</label>
+          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.C1" value="5">
+        </div>
+        <div class="form-group">
+          <label for="capacitancia">C2 en microfaradios</label>
+          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.C2" value="5">
+        </div>
+        <div class="form-group">
+          <label for="capacitancia">C3 en microfaradios</label>
+          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.C3" value="5">
+        </div>
+        <div class="form-group">
+          <label for="capacitancia">C4 en microfaradios</label>
+          <input type="number" class="form-control" name="capacitancia" [(ngModel)]="data.C4" value="5">
         </div>
         <div class="form-group">
           <label for="voltaje">Voltaje en voltios</label>

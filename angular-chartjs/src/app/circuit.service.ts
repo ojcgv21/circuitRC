@@ -16,21 +16,15 @@ export class CircuitService {
     return res;
   }
 
-  generateVoltage(temp, v_0, R, C) {
+  generateQ(temp, v_0, R1, C1, C2, C3, C4) {
     const res = [];
+    const CR = 1.0 / (1.0 / (C1 + C2) + 1.0 / C3 + 1.0 / C4);
     for (let i = 0; i < temp.length; i++) {
-      res.push(v_0 * Math.exp( (-1) * temp[i]/ (R * C) ));
+      res.push(v_0 * CR * (1 - Math.exp( (-1) * temp[i]/ (R1 * CR) )) );
     }
     return res;
   }
 
-  generateCurrent(temp, v_0, R, C) {
-    const res = [];
-    for (let i = 0; i < temp.length; i++) {
-      res.push(v_0 - v_0 * Math.exp( (-1) * temp[i]/ (R * C) ));
-    }
-    return res;
-  }
 
 
 }
